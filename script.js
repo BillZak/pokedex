@@ -18,7 +18,7 @@ const colors = {
 }
 const main_types = Object.keys(colors)
 
-const fetchPokemons = () => {
+const fetchPokemons = async () => {
     for(let i = 1; i <= poke_count; i++){
         await getPokemon(i)
     }
@@ -46,7 +46,7 @@ const createPokemonCard = (pokemon) => {
 
     const pokemonInnerHTML = `
         <div class="img-container">
-        <img src="https://pokeras.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="">
+        <img src="https://pokeres.bastionbot.org/images/pokemon/${pokemon.id}.png" alt="">
         </div>
         <div class="info">
             <span class="number">#${id}</span>
